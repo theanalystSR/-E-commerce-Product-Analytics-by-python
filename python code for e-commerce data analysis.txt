@@ -1,0 +1,75 @@
+Full Python Code for E-commerce Product Analytics:
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load dataset
+file_path = '/mnt/data/data.csv'
+data = pd.read_csv(file_path, encoding='ISO-8859-1')
+
+# Convert InvoiceDate to datetime
+data['InvoiceDate'] = pd.to_datetime(data['InvoiceDate'])
+
+# Create a new column for total sales (Quantity * UnitPrice)
+data['TotalSales'] = data['Quantity'] * data['UnitPrice']
+
+# Drop rows with missing CustomerID (as it might be important for customer-level analysis)
+data = data.dropna(subset=['CustomerID'])
+
+# Exploratory Data Analysis (EDA)
+
+# 1. Top 10 selling products by total sales
+top_products = data.groupby('Description')['TotalSales'].sum().nlargest(10)
+print("Top 10 Selling Products by Total Sales:")
+print(top_products)
+
+# Visualize top-selling products
+plt.figure(figsize=(10, 6))
+sns.barplot(x=top_products.values, y=top_products.index)
+plt.title('Top 10 Selling Products by Total Sales')
+plt.xlabel('Total Sales')
+plt.ylabel('Product Description')
+plt.show()
+
+# 2. Monthly Sales Trend
+data['Month'] = data['InvoiceDate'].dt.to_period('M')
+monthly_sales = data.groupby('Month')['TotalSales'].sum()
+
+# Plot monthly sales trend
+plt.figure(figsize=(12, 6))
+monthly_sales.plot()
+plt.title('Monthly Sales Trend')
+plt.ylabel('Total Sales')
+plt.xlabel('Month')
+plt.grid(True)
+plt.show()
+
+# 3. Sales by Country
+country_sales = data.groupby('Country')['TotalSales'].sum().nlargest(10)
+
+# Visualize sales by country
+plt.figure(figsize=(10, 6))
+sns.barplot(x=country_sales.values, y=country_sales.index)
+plt.title('Top 10 Countries by Total Sales')
+plt.xlabel('Total Sales')
+plt.ylabel('Country')
+plt.show()
+
+# 4. Top 10 Customers by Total Spending
+top_customers = data.groupby('CustomerID')['TotalSales'].sum().nlargest(10)
+print("Top 10 Customers by Total Spending:")
+print(top_customers)
+
+# Visualize top customers
+plt.figure(figsize=(10, 6))
+sns.barplot(x=top_customers.values, y=top_customers.index)
+plt.title('Top 10 Customers by Total Spending')
+plt.xlabel('Total Sales')
+plt.ylabel('Customer ID')
+plt.show()
+
+# 5. Calculate Average Order Value (AOV)
+aov = data['TotalSales'].sum() / data['InvoiceNo'].nunique()
+print(f'Average Order Value: {aov:.2f}')

@@ -1,0 +1,44 @@
+Top 10 Selling Products by Total Sales:
+
+REGENCY CAKESTAND 3 TIER: £132,870.40
+WHITE HANGING HEART T-LIGHT HOLDER: £93,823.85
+JUMBO BAG RED RETROSPOT: £83,236.76
+PARTY BUNTING: £67,687.53
+POSTAGE: £66,710.24
+ASSORTED COLOUR BIRD ORNAMENT: £56,499.22
+RABBIT NIGHT LIGHT: £51,137.80
+CHILLI LIGHTS: £45,936.81
+PAPER CHAIN KIT 50'S CHRISTMAS: £41,500.48
+PICNIC BASKET WICKER 60 PIECES: £39,619.50
+Monthly Sales Trend (First 5 months):
+
+December 2010: £554,604.02
+January 2011: £475,074.38
+February 2011: £436,546.15
+March 2011: £579,964.61
+April 2011: £426,047.85
+Top 10 Countries by Total Sales:
+
+United Kingdom: £6,767,873.39
+Netherlands: £284,661.54
+EIRE (Ireland): £250,285.22
+Germany: £221,698.21
+France: £196,712.84
+Australia: £137,077.27
+Switzerland: £55,739.40
+Spain: £54,774.58
+Belgium: £40,910.96
+Sweden: £36,595.91
+Top 10 Customers by Total Spending:
+
+Customer ID 14646: £279,489.02
+Customer ID 18102: £256,438.49
+Customer ID 17450: £187,482.17
+Customer ID 14911: £132,572.62
+Customer ID 12415: £123,725.45
+Customer ID 14156: £113,384.14
+Customer ID 17511: £88,125.38
+Customer ID 16684: £65,892.08
+Customer ID 13694: £62,653.10
+Customer ID 15311: £59,419.34
+Average Order Value (AOV): £374.05
